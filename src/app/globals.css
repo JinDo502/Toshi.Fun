@@ -1,26 +1,65 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Inter";
+  src: url("/font/Inter.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Jersey";
+  src: url("/font/Jersey15.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --text-bg: rgb(32, 37, 54);
+  --bg: #2c3550;
+  --bg2: #181d2b;
+  --bg3: rgb(56, 68, 102);
+  --fg: #ffffff;
+  --primary: #ffa600;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-textBg: var(--text-bg);
+  --color-background: var(--bg);
+  --color-background-secondary: var(--bg2);
+  --color-background-tertiary: var(--bg3);
+  --color-foreground: var(--fg);
+  --color-primary: var(--primary);
+  --font-inter: var(--font-inter);
+  --font-jersey: var(--font-jersey);
+  --shadow-sm: rgba(0, 0, 0, 0.33) 0px 4px 4px 0px;
+  --shadow-md: rgba(0, 0, 0, 0.33) 0px 8px 8px 0px;
+  --shadow-lg: rgba(0, 0, 0, 0.33) 0px 16px 16px 0px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.text-outline {
+  text-shadow:
+    -4px -4px 0 var(--text-bg),
+    4px -4px 0 var(--text-bg),
+    -4px 4px 0 var(--text-bg),
+    4px 4px 0 var(--text-bg),
+    -4px 0px 0 var(--text-bg),
+    4px 0px 0 var(--text-bg),
+    0px -4px 0 var(--text-bg),
+    0px 4px 0 var(--text-bg);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+
+.hide-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
