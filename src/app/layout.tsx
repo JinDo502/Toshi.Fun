@@ -4,6 +4,10 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { SolanaProvider } from "@/components/SolanaProvider";
 import { Inter, Jersey_15 } from "next/font/google";
+import dayjs from "dayjs";
+import "dayjs/locale/en";
+
+dayjs.locale("en");
 
 export const metadata: Metadata = {
   title: "Create Next App",
