@@ -43,7 +43,7 @@ const CouponInput = () => {
                     maxLength={1}
                     inputMode="numeric"
                     pattern="[0-9]*"
-                    className="aspect-square w-full rounded-lg bg-gray-800 text-center"
+                    className="aspect-square w-full rounded-lg bg-gray-700 text-center"
                     value={couponCode[index]}
                     onChange={(e) => handleInputChange(index, e.target.value)}
                     data-index={index}
